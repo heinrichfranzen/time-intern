@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TIME GmbH — App-Übersicht (intern)</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            background: #f5f5f7;
+            color: #1d1d1f;
+            padding: 40px 24px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+
+        header h1 {
+            font-size: 28px;
+            font-weight: 700;
+            color: #1d1d1f;
+        }
+
+        header p {
+            margin-top: 6px;
+            font-size: 14px;
+            color: #6e6e73;
+        }
+
+        .section-title {
+            font-size: 13px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: #6e6e73;
+            margin: 40px 0 16px;
+            border-bottom: 1px solid #d2d2d7;
+            padding-bottom: 8px;
+        }
+
+        .app-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+            gap: 20px;
+        }
+
+        .app-card {
+            background: white;
+            border-radius: 16px;
+            padding: 24px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+        }
+
+        .app-header {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-bottom: 14px;
+        }
+
+        .app-icon {
+            width: 56px;
+            height: 56px;
+            border-radius: 13px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 26px;
+            flex-shrink: 0;
+        }
+
+        .app-icon.terminal  { background: #1c1c1e; }
+        .app-icon.auth      { background: #6b5ce7; }
+        .app-icon.zutritt   { background: #34c759; }
+        .app-icon.room      { background: #007aff; }
+        .app-icon.future    { background: #d2d2d7; }
+
+        .app-name {
+            font-size: 17px;
+            font-weight: 600;
+        }
+
+        .app-subtitle {
+            font-size: 13px;
+            color: #6e6e73;
+            margin-top: 2px;
+        }
+
+        .app-desc {
+            font-size: 14px;
+            color: #3a3a3c;
+            line-height: 1.5;
+            margin-bottom: 16px;
+        }
+
+        .platform-list {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .platform-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 13px;
+        }
+
+        .platform-name {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            color: #3a3a3c;
+            font-weight: 500;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 3px 10px;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: 600;
+        }
+
+        .badge.verfuegbar  { background: #d1f2d9; color: #1a7f37; }
+        .badge.review      { background: #fff3cd; color: #856404; }
+        .badge.intern      { background: #cfe2ff; color: #084298; }
+        .badge.geplant     { background: #f0f0f0; color: #6e6e73; }
+        .badge.sideload    { background: #ffe5cc; color: #7a3b00; }
+
+        .store-link {
+            font-size: 11px;
+            color: #007aff;
+            text-decoration: none;
+            margin-left: 8px;
+        }
+        .store-link:hover { text-decoration: underline; }
+
+        .divider {
+            border: none;
+            border-top: 1px solid #f0f0f0;
+            margin: 14px 0;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 56px;
+            font-size: 12px;
+            color: #aeaeb2;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>TIME GmbH zeitsysteme — App-Portfolio</h1>
+    <p>Interne Übersicht · Stand: Juni 2026</p>
+</header>
+
+<div class="section-title">Verfügbare Apps</div>
+
+<div class="app-grid">
+
+    <!-- TSTerminalRevamp -->
+    <div class="app-card">
+        <div class="app-header">
+            <div class="app-icon terminal">⏱</div>
+            <div>
+                <div class="app-name">TSTerminalRevamp</div>
+                <div class="app-subtitle">Zeiterfassung &amp; Projektverwaltung</div>
+            </div>
+        </div>
+        <p class="app-desc">
+            Digitales Zeiterfassungs-Terminal für Mitarbeiter. Buchungen, Projektzuordnung,
+            Saldoansicht. SmartLogin per QR-Code via TSAuthenticator.
+        </p>
+        <hr class="divider">
+        <div class="platform-list">
+            <div class="platform-row">
+                <span class="platform-name">📱 iOS</span>
+                <span>
+                    <span class="badge verfuegbar">Verfügbar</span>
+                    <a class="store-link" href="#">App Store →</a>
+                </span>
+            </div>
+            <div class="platform-row">
+                <span class="platform-name">🖥 macOS</span>
+                <span>
+                    <span class="badge verfuegbar">Verfügbar</span>
+                    <a class="store-link" href="#">Mac App Store →</a>
+                </span>
+            </div>
+            <div class="platform-row">
+                <span class="platform-name">🪟 Windows</span>
+                <span>
+                    <span class="badge sideload">Sideload / Store in Prüfung</span>
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <!-- TSAuthenticator -->
+    <div class="app-card">
+        <div class="app-header">
+            <div class="app-icon auth">🔐</div>
+            <div>
+                <div class="app-name">TSAuthenticator</div>
+                <div class="app-subtitle">SmartLogin Companion</div>
+            </div>
+        </div>
+        <p class="app-desc">
+            Smartphone-App für den sicheren Desktop-Login per QR-Code-Scan.
+            Ersetzt Passwort-Eingabe am Windows- oder Mac-Terminal.
+        </p>
+        <hr class="divider">
+        <div class="platform-list">
+            <div class="platform-row">
+                <span class="platform-name">📱 iOS</span>
+                <span>
+                    <span class="badge review">In App-Prüfung</span>
+                    <a class="store-link" href="#">App Store →</a>
+                </span>
+            </div>
+            <div class="platform-row">
+                <span class="platform-name">🤖 Android</span>
+                <span>
+                    <span class="badge intern">Interner Test</span>
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <!-- TSZutrittQR -->
+    <div class="app-card">
+        <div class="app-header">
+            <div class="app-icon zutritt">🔑</div>
+            <div>
+                <div class="app-name">TSZutrittQR</div>
+                <div class="app-subtitle">QR-Code Zutrittskontrolle</div>
+            </div>
+        </div>
+        <p class="app-desc">
+            Zutrittssteuerung über QR-Code für Türen und Zugangspunkte.
+            Mitarbeiter scannen ihren persönlichen QR-Code zum Öffnen.
+        </p>
+        <hr class="divider">
+        <div class="platform-list">
+            <div class="platform-row">
+                <span class="platform-name">📱 iOS</span>
+                <span>
+                    <span class="badge verfuegbar">Verfügbar</span>
+                    <a class="store-link" href="#">App Store →</a>
+                </span>
+            </div>
+            <div class="platform-row">
+                <span class="platform-name">🤖 Android</span>
+                <span>
+                    <span class="badge verfuegbar">Verfügbar</span>
+                    <a class="store-link" href="#">Google Play →</a>
+                </span>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="section-title">Geplante Apps</div>
+
+<div class="app-grid">
+
+    <!-- TSRoomQR -->
+    <div class="app-card">
+        <div class="app-header">
+            <div class="app-icon room">🚪</div>
+            <div>
+                <div class="app-name">TSRoomQR</div>
+                <div class="app-subtitle">Raumbuchung per QR-Code</div>
+            </div>
+        </div>
+        <p class="app-desc">
+            QR-Code-basierte Raumbuchung und -verwaltung. (In Planung)
+        </p>
+        <hr class="divider">
+        <div class="platform-list">
+            <div class="platform-row">
+                <span class="platform-name">📱 iOS</span>
+                <span><span class="badge geplant">Geplant</span></span>
+            </div>
+            <div class="platform-row">
+                <span class="platform-name">🤖 Android</span>
+                <span><span class="badge geplant">Geplant</span></span>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="section-title">Sicherheitshinweise · TSZutrittQR</div>
+
+<div class="app-card" style="max-width: 720px;">
+    <p class="app-desc" style="margin-bottom:0;">
+        <strong>Wie sicher ist Ihr QR-Code-Zutritt?</strong><br><br>
+        Jeder QR-Code ist personalisiert und zeitlich begrenzt gültig. Abgelaufene oder deaktivierte Codes
+        werden sofort gesperrt — Verlust eines Smartphones bedeutet kein dauerhaftes Sicherheitsrisiko.
+        Die Kommunikation erfolgt verschlüsselt über HTTPS. Zutrittsversuche werden lückenlos protokolliert.
+        <br><br>
+        <em>(Dieser Abschnitt wird weiter ausgebaut — bitte ergänzen wo nötig.)</em>
+    </p>
+</div>
+
+<footer>
+    TIME GmbH zeitsysteme · Interne Übersicht · Nicht zur Veröffentlichung
+</footer>
+
+</body>
+</html>
